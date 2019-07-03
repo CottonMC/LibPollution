@@ -16,6 +16,6 @@ public class LibPollution implements ModInitializer {
 	}
 
 	public static PollutionArea getPollutionArea(World world, BlockPos pos) {
-		return new PollutionArea(world, pos);
+		return new PollutionArea();
 	}
 }
