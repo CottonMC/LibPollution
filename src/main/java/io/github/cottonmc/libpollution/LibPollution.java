@@ -15,9 +15,7 @@ public class LibPollution implements ModInitializer {
 		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new SimplePollutionType());
 	}
 
-	public static void pollute(Identifier pollutionType, int amount, World world, BlockPos pos) {
-	}
-
-	public static void getPollutionZone(World world, BlockPos pos) {
+	public static PollutionArea getPollutionArea(World world, BlockPos pos) {
+		return new PollutionArea(world, pos);
 	}
 }
