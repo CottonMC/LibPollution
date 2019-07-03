@@ -1,6 +1,7 @@
 package io.github.cottonmc.libpollution;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
@@ -15,7 +16,7 @@ public class LibPollution implements ModInitializer {
 		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new PollutionType());
 	}
 
-	public static PollutionArea getPollutionArea(World world, BlockPos pos) {
-		return new PollutionArea();
+	public static PollutionArea getPollutionArea(ServerWorld world, BlockPos pos) {
+		return world.getPersistentStateManager().getOrCreate(PollutionState::new, "pollution").getPollution(world.getChunk(pos).getPos());
 	}
 }

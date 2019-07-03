@@ -4,8 +4,6 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class PollutionArea {
     private final Object2IntMap<PollutionType> pollutions = new Object2IntOpenHashMap<>();
