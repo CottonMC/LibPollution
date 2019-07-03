@@ -12,7 +12,7 @@ public class LibPollution implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new SimplePollutionType());
+		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new PollutionType());
 	}
 
 	public static PollutionArea getPollutionArea(World world, BlockPos pos) {

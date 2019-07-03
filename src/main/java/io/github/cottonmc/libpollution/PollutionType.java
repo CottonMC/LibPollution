@@ -1,5 +1,7 @@
 package io.github.cottonmc.libpollution;
 
-public abstract class PollutionType {
-    public abstract int getPollutionSpreadRate();
+public class PollutionType {
+    public int getPollutionSpreadRate() {
+        return 0;
+    }
 }
