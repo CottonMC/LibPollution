@@ -1,12 +1,14 @@
 package io.github.cottonmc.libpollution;
 
+import io.github.cottonmc.libpollution.api.PollutionArea;
+import io.github.cottonmc.libpollution.api.PollutionType;
+import io.github.cottonmc.libpollution.impl.PollutionState;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.SimpleRegistry;
-import net.minecraft.world.World;
 
 public class LibPollution implements ModInitializer {
 	public static final Registry<PollutionType> POLLUTION_TYPE = new SimpleRegistry<>();

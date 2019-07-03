@@ -1,4 +1,4 @@
-package io.github.cottonmc.libpollution;
+package io.github.cottonmc.libpollution.api;
 
 public class PollutionType {
     public int getPollutionSpreadRate() {

@@ -1,5 +1,6 @@
-package io.github.cottonmc.libpollution;
+package io.github.cottonmc.libpollution.api;
 
+import io.github.cottonmc.libpollution.LibPollution;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.nbt.CompoundTag;
