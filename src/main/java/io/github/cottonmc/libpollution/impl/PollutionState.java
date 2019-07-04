@@ -35,7 +35,9 @@ public class PollutionState extends PersistentState {
 	}
 
 	public PollutionArea getPollution(ChunkPos pos) {
-		return chunkMap.get(pos.toLong());
+		long key = pos.toLong();
+		if (!chunkMap.containsKey(key)) chunkMap.put(key, new PollutionArea());
+		return chunkMap.get(key);
 	}
 
 	public void setPollution(ChunkPos pos, PollutionArea pollution) {
