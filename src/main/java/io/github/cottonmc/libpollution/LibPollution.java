@@ -1,5 +1,6 @@
 package io.github.cottonmc.libpollution;
 
+import io.github.cottonmc.libpollution.api.ExhaustPollutionType;
 import io.github.cottonmc.libpollution.api.PollutionArea;
 import io.github.cottonmc.libpollution.api.PollutionType;
 import io.github.cottonmc.libpollution.impl.PollutionState;
@@ -17,7 +18,7 @@ public class LibPollution implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Registry.REGISTRIES.add(new Identifier("libpollution", "pollution"), (MutableRegistry)POLLUTION_TYPE);
-		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new PollutionType());
+		Registry.register(POLLUTION_TYPE, new Identifier("libpollution", "exhaust"), new ExhaustPollutionType());
 	}
 
 	public static PollutionArea getPollutionArea(ServerWorld world, BlockPos pos) {

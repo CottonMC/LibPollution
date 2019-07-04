@@ -5,8 +5,15 @@ import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 
 public abstract class PollutionType {
+    //TODO: figure out what this rate means code-wise
+    protected int spreadRate;
+
+    public PollutionType(int spreadRate) {
+        this.spreadRate =  spreadRate;
+    }
+
     public int getPollutionSpreadRate() {
-        return 0;
+        return spreadRate;
     }
 
     public abstract void affectEntity(LivingEntity entity);
